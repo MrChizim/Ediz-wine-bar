@@ -136,6 +136,10 @@
             box-shadow: 0 6px 20px rgba(166, 124, 82, 0.4);
         }
 
+        .cta-button:visited {
+            color: white;
+        }
+
         /* Contact Bar */
         .contact-bar {
             background: var(--accent-color);
@@ -168,6 +172,10 @@
 
         .contact-item a:hover {
             opacity: 0.8;
+        }
+
+        .contact-item a:visited {
+            color: white;
         }
 
         /* Main Content */
@@ -484,6 +492,10 @@
             fill: white;
         }
 
+        .social-link:visited {
+            color: white;
+        }
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -517,6 +529,10 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+
             .contact-bar {
                 flex-direction: column;
                 gap: calc(var(--spacing-unit) * 2);
@@ -527,48 +543,116 @@
                 justify-content: center;
             }
 
+            .drinks-nav {
+                padding: calc(var(--spacing-unit) * 1.5) 0;
+            }
+
             .nav-container {
+                justify-content: flex-start;
                 padding: 0 calc(var(--spacing-unit) * 2);
+                gap: calc(var(--spacing-unit) * 1.5);
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+                padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 2);
+                white-space: nowrap;
             }
 
             .section-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+            }
+
+            .menu-section {
+                padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2);
+            }
+
+            .menu-section:nth-child(even),
+            .menu-section:nth-child(odd) {
+                background-attachment: scroll;
+            }
+
+            .menu-item {
+                padding: calc(var(--spacing-unit) * 2.5);
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: calc(var(--spacing-unit) * 1.5);
+            }
+
+            .item-price {
+                align-self: flex-start;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
             }
         }
 
         @media (max-width: 480px) {
             .header {
                 min-height: 75vh;
+                padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 2);
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: calc(var(--spacing-unit) * 1.75) calc(var(--spacing-unit) * 3.5);
+            }
+
+            .nav-link {
+                font-size: 0.85rem;
+                padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.75);
             }
 
             .menu-item {
-                padding: calc(var(--spacing-unit) * 3);
+                padding: calc(var(--spacing-unit) * 2);
             }
 
             .item-name {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
 
             .item-price {
-                font-size: 1.2rem;
-                padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1.5);
+                font-size: 1.15rem;
+                padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
             }
 
             .item-description {
                 font-size: 0.9rem;
             }
 
+            .bottle-card {
+                padding: calc(var(--spacing-unit) * 2.5);
+            }
+
             .bottle-name {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
 
             .bottle-price {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+                padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
             }
 
-            .nav-link {
-                font-size: 0.85rem;
-                padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2.5);
+            .social-links {
+                gap: calc(var(--spacing-unit) * 2.5);
+            }
+
+            .social-link {
+                width: 42px;
+                height: 42px;
+            }
+
+            .social-link svg {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
