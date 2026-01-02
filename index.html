@@ -531,12 +531,15 @@
         @media (max-width: 768px) {
             body {
                 background-attachment: scroll;
+                background-image: none;
+                background-color: var(--primary-bg);
             }
 
             .contact-bar {
                 flex-direction: column;
                 gap: calc(var(--spacing-unit) * 2);
                 text-align: center;
+                padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 2);
             }
 
             .contact-item {
@@ -545,45 +548,71 @@
 
             .drinks-nav {
                 padding: calc(var(--spacing-unit) * 1.5) 0;
+                background: white;
+                border-bottom: 1px solid var(--border-color);
             }
 
             .nav-container {
                 justify-content: flex-start;
                 padding: 0 calc(var(--spacing-unit) * 2);
-                gap: calc(var(--spacing-unit) * 1.5);
+                gap: calc(var(--spacing-unit) * 1);
             }
 
             .nav-link {
-                font-size: 0.9rem;
-                padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 2);
+                font-size: 0.85rem;
+                padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.75);
                 white-space: nowrap;
+                background: var(--secondary-bg);
+                border: 1px solid var(--border-color);
             }
 
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                text-align: center;
+            }
+
+            .section-subtitle {
+                text-align: center;
             }
 
             .menu-section {
-                padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2);
+                padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2);
             }
 
             .menu-section:nth-child(even),
             .menu-section:nth-child(odd) {
                 background-attachment: scroll;
+                background-image: none;
+                background-color: var(--primary-bg);
             }
 
             .menu-item {
-                padding: calc(var(--spacing-unit) * 2.5);
+                padding: calc(var(--spacing-unit) * 2);
+                background: white;
+                border: 2px solid var(--border-color);
             }
 
             .item-header {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-start;
                 gap: calc(var(--spacing-unit) * 1.5);
+                margin-bottom: calc(var(--spacing-unit) * 1);
+            }
+
+            .item-name {
+                font-size: 1.15rem;
+                flex: 1;
+                line-height: 1.4;
             }
 
             .item-price {
-                align-self: flex-start;
+                font-size: 1.1rem;
+                flex-shrink: 0;
+            }
+
+            .bottle-card {
+                background: white;
+                border: 3px solid var(--accent-color);
             }
 
             .back-to-top {
@@ -597,62 +626,74 @@
 
         @media (max-width: 480px) {
             .header {
-                min-height: 75vh;
-                padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 2);
+                min-height: 70vh;
+                padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 2);
+            }
+
+            .business-name {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
             }
 
             .cta-button {
-                font-size: 1rem;
-                padding: calc(var(--spacing-unit) * 1.75) calc(var(--spacing-unit) * 3.5);
+                font-size: 0.95rem;
+                padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
             }
 
             .nav-link {
-                font-size: 0.85rem;
-                padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.75);
+                font-size: 0.8rem;
+                padding: calc(var(--spacing-unit) * 0.875) calc(var(--spacing-unit) * 1.5);
+            }
+
+            .menu-section {
+                padding: calc(var(--spacing-unit) * 2.5) calc(var(--spacing-unit) * 1.5);
             }
 
             .menu-item {
-                padding: calc(var(--spacing-unit) * 2);
+                padding: calc(var(--spacing-unit) * 1.75);
             }
 
             .item-name {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
             }
 
             .item-price {
-                font-size: 1.15rem;
-                padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
+                font-size: 1.1rem;
+                padding: calc(var(--spacing-unit) * 0.625) calc(var(--spacing-unit) * 1.75);
             }
 
             .item-description {
-                font-size: 0.9rem;
+                font-size: 0.875rem;
             }
 
             .bottle-card {
-                padding: calc(var(--spacing-unit) * 2.5);
+                padding: calc(var(--spacing-unit) * 2);
             }
 
             .bottle-name {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
             }
 
             .bottle-price {
-                font-size: 1.4rem;
-                padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
+                font-size: 1.3rem;
+                padding: calc(var(--spacing-unit) * 0.625) calc(var(--spacing-unit) * 1.75);
             }
 
             .social-links {
-                gap: calc(var(--spacing-unit) * 2.5);
+                gap: calc(var(--spacing-unit) * 2);
             }
 
             .social-link {
-                width: 42px;
-                height: 42px;
+                width: 40px;
+                height: 40px;
             }
 
             .social-link svg {
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
             }
         }
     </style>
